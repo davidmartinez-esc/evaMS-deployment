@@ -1,0 +1,21 @@
+minikube start
+
+minikube stop
+
+docker context use default
+
+kubectl delete deployments --all
+kubectl delete services --all
+kubectl delete secrets --all
+
+kubectl delete -f nombbredearchivo.yaml
+
+kubectl apply -f nombredearchivo.yaml
+
+kubectl exec -it nombrdelpod -- /bin/bash
+
+kubectl logs -f nombredelpod
+
+-----HACER TUNEL
+
+minikube service nombredepodcorriendo
