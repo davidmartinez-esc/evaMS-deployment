@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: eureka-service
-          image: dddavidesc/eureka-service
+          image: dddavidesc/eureka-service:latest
           ports:
             - containerPort: 8761
 ---
