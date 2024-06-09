@@ -12,6 +12,10 @@ kubectl delete -f nombbredearchivo.yaml
 
 kubectl apply -f nombredearchivo.yaml
 
+kubectl get configmap
+
+kubectl get secrets
+
 kubectl exec -it nombrdelpod -- /bin/bash
 
 kubectl logs -f nombredelpod

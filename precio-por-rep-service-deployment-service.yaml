@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: vehiculo-service-deployment
+  name: precio-por-rep-service-deployment
   labels:
-    app: vehiculo-service-deployment
+    app: precio-por-rep-service-deployment
 spec:
   selector:
     matchLabels:
-      app: vehiculo-service-deployment
+      app: precio-por-rep-service-deployment
   replicas: 1
   template:
     metadata:
       labels:
-        app: vehiculo-service-deployment
+        app: precio-por-rep-service-deployment
     spec:
       containers:
-        - name: vehiculo-service
-          image: dddavidesc/vehiculo-service
+        - name: precio-por-rep-service
+          image: dddavidesc/precio-por-rep-service
           ports:
             - containerPort: 8090
           env:
@@ -26,24 +26,24 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: postgres-config-map
-                  key: DB_HOST_VEHICULO
+                  key: DB_HOST_PRECIOS
             - name: DB_PORT
               valueFrom:
                 configMapKeyRef:
                   name: postgres-config-map
-                  key: DB_PORT_VEHICULO
+                  key: DB_PORT_PRECIOS
             - name: DB_DBNAME
               valueFrom:
                 configMapKeyRef:
                   name: postgres-config-map
-                  key: DB_DBNAME_VEHICULO
+                  key: DB_DBNAME_PRECIOS
             - name: DB_USER
               valueFrom:
                 secretKeyRef:
                   name: postgres-credentials
-                  key: DB_USER_VEHICULO
+                  key: SECRET_DB_USER
             - name: DB_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: postgres-credentials
-                  key: DB_PASSWORD_VEHICULO
+                  key: SECRET_DB_PASSWORD
