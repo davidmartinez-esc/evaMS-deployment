@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: recargos-service-deployment
+  name: descuentos-service-deployment
   labels:
-    app: recargos-service-deployment
+    app: descuentos-service-deployment
 spec:
   selector:
     matchLabels:
-      app: recargos-service-deployment
+      app: descuentos-service-deployment
   replicas: 1
   template:
     metadata:
       labels:
-        app: recargos-service-deployment
+        app: descuentos-service-deployment
     spec:
       containers:
-        - name: recargos-service
-          image: dddavidesc/recargos-service
+        - name: descuentos-service
+          image: dddavidesc/descuentos-service
           ports:
             - containerPort: 8090
           env:
@@ -36,7 +36,7 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: postgres-config-map
-                  key: DB_DBNAME_RECARGOS
+                  key: DB_DBNAME_DESCUENTOS
             - name: DB_USER
               valueFrom:
                 secretKeyRef:

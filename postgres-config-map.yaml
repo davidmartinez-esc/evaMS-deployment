@@ -17,5 +17,16 @@ data:
   DB_PORT_RECARGOS: "5434"
   DB_DBNAME_RECARGOS: recargos-db
 
+  DB_HOST_DESCUENTOS: descuentos-db-service
+  DB_PORT_DESCUENTOS: "5435"
+  DB_DBNAME_DESCUENTOS: descuentos-db
+
+  DB_HOST_IRB: irb-db-service
+  DB_PORT_IRB: "5436"
+
+  DB_DBNAME_INGRESOS: ingresos-db
+  DB_DBNAME_REPARACIONES: reparaciones-db
+  DB_DBNAME_BONOS: bonos-db
+
 
   
