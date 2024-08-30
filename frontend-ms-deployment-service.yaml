@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: frontend-ms-service
-          image: dddavidesc/frontend-ms:latest
+          image: dddavidesc/frontend-service:latest
           ports:
             - containerPort: 3000
 ---
